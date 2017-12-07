@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MailClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" MinWidth="450" MinHeight="300" >
+        Title="MainWindow" Height="550" Width="850" MinWidth="450" MinHeight="300" >
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="收信"/>
@@ -52,12 +52,12 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
                 <DockPanel Grid.Row="0" Margin="0,0,0,3">
-                    <Label DockPanel.Dock="Left">发件人：</Label>
-                    <TextBox DockPanel.Dock="Right"></TextBox>
+                    <Label x:Name="SenderLabel" DockPanel.Dock="Left" HorizontalContentAlignment="Right" >发件人：</Label>
+                    <TextBox DockPanel.Dock="Right" VerticalAlignment="Center"/>
                 </DockPanel>
                 <DockPanel Grid.Row="1" Margin="0,0,0,3">
-                    <Label DockPanel.Dock="Left">发件人：</Label>
-                    <TextBox DockPanel.Dock="Right"></TextBox>
+                    <Label DockPanel.Dock="Left" Width="{Binding ActualWidth, ElementName=SenderLabel}" HorizontalContentAlignment="Right" >主题：</Label>
+                    <TextBox DockPanel.Dock="Right" VerticalAlignment="Center"/>
                 </DockPanel>
                 <RichTextBox x:Name="richTextBox" Grid.Row="2">
                     <FlowDocument>
