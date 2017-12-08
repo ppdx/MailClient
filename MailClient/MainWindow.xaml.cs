@@ -24,5 +24,15 @@ namespace MailClient
         {
             InitializeComponent();
         }
+
+        private void AddUserMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            NewUser newUser = new NewUser();
+            var res = newUser.ShowDialog();
+            if (res != null && res.Value)
+            {
+
+            }
+        }
     }
 }

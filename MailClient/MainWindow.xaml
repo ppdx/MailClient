@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MailClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="850" MinWidth="450" MinHeight="300" >
+        Title="MailClient" Height="550" Width="850" MinWidth="450" MinHeight="300" Icon="mail.ico">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="收信"/>
@@ -16,7 +16,9 @@
             <!--<MenuItem Header="全部保存"/>-->
             <MenuItem Header="删除"/>
             <MenuItem Header="清空本地邮箱"/>
-            <MenuItem Header="设置"/>
+            <MenuItem Header="设置">
+                <MenuItem Header="添加用户"  Click="AddUserMenuItem_Click"/>
+            </MenuItem>
         </Menu>
         <Grid>
             <Grid.ColumnDefinitions>
